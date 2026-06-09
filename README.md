@@ -1,2 +1,10 @@
-# Cybersecurity-Journey-2026
-This will have month wise work, practice, certifications and projects on that particular topic.
+# Cybersecurity Journey 2026
+
+Goal:
+Become job-ready in cybersecurity within 12 months.
+
+Current Stage:
+Stage 1 - Development Foundations
+
+Started:
+August 2026
