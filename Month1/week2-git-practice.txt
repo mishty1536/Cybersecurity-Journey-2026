@@ -1,0 +1,13 @@
+practicing git branching
+1. git branch => *main here * means you are currently on that branch
+2. create new branch
+ => git branch branchName
+3. switch branch
+ => git checkout branchName
+4. to check current branch
+ => git branch
+5. add new files
+ => create new files in it normally
+6. merge branches
+ => git merge branchName
+--> once you switch back to main and before merging with main the file you created inside the new branch will disappear
