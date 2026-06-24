@@ -1,0 +1,126 @@
+==> What is OWASP?
+ -> OWASP = Open Worldwide Application Security Project
+ -> Top 10 mistakes developers make that attackers exploit
+
+1. Broken Access Control (Highest Priority HP)
+-> users access things they should not 
+==>What it is?
+   --> It occurs when an application fails to properly restrict what authenticated or unauthenticated users can do allowing then to access, modify, or perform actions on resources that they are not authorized to use.
+
+==>example:
+   --> Suppose a banking website has the URl:
+       https: //bank.com /account ? id = 101
+       A user changes the account ID to:
+       https: //bank.com /account ? id = 102
+       A normal user accesses an admin page and can view or modify admin data bcz permission checks are missing
+
+==>Impact:
+   --> 1.Unauthorized data access
+       2. Data theft or modification
+       3. Privilege escalation
+       4. Security and financial risks for the organization
+
+-> Real Example: Student accessing another student's marks
+-> Future Roadmap Connection (FRC): AppSec
+
+2. Cryptographic Failures (Medium Priority MP)
+->Sensitive data is not protected properly 
+->Eg. Passwords stored as:
+        password123
+      instead of: 
+        hased_password
+->Impact: Database leak = everyone exposed 
+->Solution: use: bcrypt, HTTPS, Encryption
+
+3. Injection (HP)
+-> one of the most famous vulnerabilities
+==>What it is?
+   -->Injection is a vulnerability where an attacker sends malicious input to an applition, causing it to execute unintended commands or queries
+
+==>example:
+   --> A login form accepts user input directly in an SQL query. An attacker enters: 'OR '1' = '1
+   which can bypass authentication and grant unauthorized access.
+
+->Database becomes confused and may bypass login
+
+==>Impact:
+   --> 1. Unauthorized access to systems
+       2. Data theft or modification
+       3. Loss of sensitive information
+
+->Types: -SQL Injection
+         -NoSQl Injection
+         - Command Injection
+-> Future Roadmap Connection (FRC): Web Security
+
+4. Insecure Design
+-> Application designed poorl
+->Eg. Bank transfer page allows:
+          Transfer Rupess 100000
+      without verification
+      Even if code is secure, the design is flawed
+
+5. Security Misconfiguration (MP)
+-> Server configured incorrectly
+->Eg. Default Passwords
+      Open ports
+      Debug Mode Enabled
+->Impact: Easy target for attackers
+->Future Roadmap Connection(FRC): Clud Security
+
+6. Vulnerable Components
+-> Using outdated libraries
+->Eg. old React Version
+      old Node Version
+    with known vulnerabilities
+->Solution: Update dependencies regularly
+
+7. Identification and Authentication Failures (HP)
+-> Login system is weak
+==>What it is?
+   --> Authentication Failure occurs when an application improperly verifies a user's identity, allowing attackers to gain unauthorized access to accounts or systems
+
+==>example:
+   -->A website allows weak passwords like 123456 and has no limit on login attempts. An attacker can guess the password and log into another user's account
+   -->Weak Passwords
+      No MFA 
+      Session Issues
+
+==>Impact:
+   --> 1. Account takeover
+       2. Identity theft
+       3. Unauthorized access to sensitive data
+
+-> Future Roadmap Connection(FRC): MERN Projects
+
+8. Software and Data Integrity Failures
+-> Application trusts unverified Software
+->Eg. Instaling packages from untrusted sources
+->Impact: supply-chain attacks 
+
+9. Security Logging and Monitoring Failures (HP)
+-> Attacks happen but nobody notices
+==> What it is?
+   -->Security logging and Monitoring Failure occurs when an application does not properly record, monitor, or alert susppicious activities, making it difficult to detect security incidents
+
+==>example:
+   -->Multiple failed login attempts are not logged or reported. An attacker performs a brute-force attack, but administrators remain unaware of the activity.
+   --> 1000 failed login attempts
+       no alert generated
+
+==>Impact:
+   --> 1. Attackers remain hidden
+       2. Delayed detection of attacks
+       3. Difficulty investigating incidents
+       4. Increased damage from security breaches
+       5. Data loss and financial losses for the organization
+-> Future Roadmap connection(FRC): Log Dashboard Project
+
+10. SSRF (Sever-Side Request Forgery) (MP)
+-> Attacker tricks server into making requests
+->Eg. Server fetches image from URl
+      Attacker provides:
+          http: //internal-server /admin
+      Server unknowingly accesses internal resources
+->Impact: Internal network exposure
+->FRC: Advanced Web Security
