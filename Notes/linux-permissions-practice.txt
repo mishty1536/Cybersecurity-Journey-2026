@@ -1,0 +1,106 @@
+=> File Types
+1. first character tells type:
+    - = file
+    d = Directory
+    l = Link
+2. the 3 permission Types
+    r = Read
+    -> open file
+    -> view contents
+
+    w = write
+    -> Edit file
+    -> Delete file
+    -> Modify file
+
+    x = Execute
+    -> Run program
+    -> Execute script
+3. Permission Groups
+linux divides user into:
+Owner -> person who created file
+Group -> Members of same Group
+Others -> Everyone else
+
+example: rw- r-- r--
+means: owner: Read+write
+       group: Read only
+       others: Read only
+
+4. Numeric Permissions (755, 644, 777)
+values: READ = 4
+        WRITE = 2
+        EXECUTE = 1
+
+    755:
+    owner -> 4+2+1 = 7
+    group -> 4+1 = 5
+    others -> 4+1 = 5
+    result: rwx r-x r-x
+    meaning: owner = Read+Write+Execute
+             group = Read+Execute
+             others = Read+Execute
+
+    644:
+    owner -> 4+2 = 6
+    group -> 4
+    others -> 4
+    result: rw- r-- r--
+    meaning: owner = Read+Write
+             group = Read
+             others = Read
+
+    777:
+    owner -> 4+2+1 = 7
+    group -> 4+2+1 = 7
+    others -> 4+2+1 = 7
+    result: rwx rwx rwx
+    meaning: owner = Read+Write+Execute
+             group = Read+Write+Execute
+             others = Read+Write+Execute
+             => Everyone can read, write and Execute
+
+    600:
+    owner -> 4+2 = 6
+    group -> 0
+    others -> 0
+    result: rw- --- ---
+    meaning: owner = Read+Write
+             group = -
+             others = -
+             => only owner can read write
+
+5. chmod Command
+-> change Permissions
+eg: chmod 644 file.txt
+check: ls -l
+Permission of file gets changed
+
+6. symbolic Method
+->Instead of numbers symbols:
+eg: chmod u+x file.txt
+Means: u = user(owner)
+       + = add
+       x = Execute
+
+7. chown Command
+->changes ownership
+eg: sudo chown user file.txt
+changes owner
+
+8. Security Rules
+(i) never use 777 unless absolutely necessary
+(ii) use least privilege principle
+
+9. Permissions:
+(i) SSH Private Key
+    chmod 600 id_rsa
+    -> only owner should read it 
+(ii) shell script
+    chmod 755 script.shell
+    ->allows execution
+(iii) web files
+    644
+(iv) Directories
+    755
+    

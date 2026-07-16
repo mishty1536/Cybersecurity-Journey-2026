@@ -1,4 +1,4 @@
-// fetch() and its use example 
+// // fetch() and its use example 
 // fetch("https://jsonplaceholder.typicode.com/users")
 // // this will not give anything as it is a promise and we need to use then() to get the data
 // .then(response => {
@@ -66,3 +66,13 @@
 // fetch("https://jsonplaceholder.typicode.com/users")
 //   .then(res => res.json())
 //   .then(users => console.log("Count:", users.length));
+
+//practice question 6: fetch users/1 and print name email phone company
+fetch("https://jsonplaceholder.typicode.com/users/1")
+.then(response => response.json())
+.then(user => {
+    console.log("Name:", user.name);
+    console.log("Email:", user.email);
+    console.log("Phone:", user.phone);
+    console.log("Company:", user.company.name);
+});

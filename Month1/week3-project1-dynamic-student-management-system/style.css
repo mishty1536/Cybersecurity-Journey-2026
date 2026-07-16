@@ -1,0 +1,75 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+
+}
+
+h1 {
+
+    color: #333;
+
+}
+
+.container {
+
+    margin: 20px;
+
+}
+
+input {
+
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+
+}
+
+button {
+
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+button:hover {
+
+    background-color: darkblue;
+
+}
+
+.student-card {
+
+    width: 350px;
+    margin: 15px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px gray;
+
+}
+
+.student-card h3 {
+
+    margin: 5px;
+
+}
+
+.delete-btn {
+
+    background-color: red;
+    margin-top: 10px;
+
+}
+
+.delete-btn:hover {
+
+    background-color: darkred;
+
+}
