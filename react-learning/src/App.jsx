@@ -13,10 +13,17 @@ import IncreaseByFive from "./Month2-Week2/Practice-Day4-useState";
 // import Q3 from "./Month2-Week2/Practice-Day5-EventHandlingAndConditionalRendering";
 // import Q4 from "./Month2-Week2/Practice-Day5-EventHandlingAndConditionalRendering";
 
-import Q1 from "./Month2-Week2/Practice-Day6-ListForms";
-import Q2 from "./Month2-Week2/Practice-Day6-ListForms";
-import Q3 from "./Month2-Week2/Practice-Day6-ListForms";
-import Q4 from "./Month2-Week2/Practice-Day6-ListForms";
+// import Q1 from "./Month2-Week2/Practice-Day6-ListForms";
+// import Q2 from "./Month2-Week2/Practice-Day6-ListForms";
+// import Q3 from "./Month2-Week2/Practice-Day6-ListForms";
+// import Q4 from "./Month2-Week2/Practice-Day6-ListForms";
+
+// import Q1 from "./Month2-Week3/Practice-Day1-useEffect";
+// import Q2 from "./Month2-Week3/Practice-Day1-useEffect";
+// import Q3 from "./Month2-Week3/Practice-Day1-useEffect";
+
+import PracticeDay2 from "./Month2-Week3/Practice-Day2-API_Integration";
+
 
 // function App() {
 //   // return (
@@ -108,15 +115,112 @@ import Q4 from "./Month2-Week2/Practice-Day6-ListForms";
 
 // export default App;
 
-function App(){
-  return (
-    <div>
-      {/* <Q1 /> */}
-      {/* <Q2 /> */}
-      {/* <Q3 /> */}
-      <Q4 />
-    </div>
-  );
-}
+// function App(){
+//   return (
+//     <div>
+//       {/* <Q1 /> */}
+//       {/* <Q2 /> */}
+//       {/* <Q3 /> */}
+//       <Q4 />
+//     </div>
+//   );
+// }
 
+// export default App;
+
+// function App(){
+//   return (
+//     <div>
+//       {/* <Q1 /> */}
+//       {/* <Q2 /> */}
+//       <Q3 />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// function App(){
+//   return(
+//     <div>
+//       <PracticeDay2 />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import { Routes, Route, Link } from "react-router-dom";
+
+// import Home from "./Pages/Home";
+// import About from "./Pages/About";
+// import Contact from "./Pages/Contact";
+// import User from "./Pages/User";
+
+// function App() {
+//     return (
+//         <div>
+
+//             <nav>
+
+//                 <Link to="/">Home</Link>
+
+//                 {" | "}
+
+//                 <Link to="/about">About</Link>
+
+//                 {" | "}
+
+//                 <Link to="/contact">Contact</Link>
+
+//                 {" | "}
+
+//                 <Link to="/user">User</Link>
+
+//             </nav>
+
+//             <hr />
+
+//             <Routes>
+
+//                 <Route path="/" element={<Home />} />
+
+//                 <Route path="/about" element={<About />} />
+
+//                 <Route path="/contact" element={<Contact />} />
+
+//                 <Route path="/user" element={<User />} />   
+
+//             </Routes>
+
+//         </div>
+//     );
+// }
+
+// export default App;
+
+//Week3 Day 5 
+// import ProfileCard from "./components/ProfileCard";
+
+// function App() {
+//     return (
+//         <>
+//             <ProfileCard name="Mishty" branch="CSE" />
+//             <ProfileCard name="Rahul" branch="IT" />
+//             <ProfileCard name="Ananya" branch="AIML" />
+//         </>
+//     );
+// }
+
+import Button from "./components/Button";
+
+function App(){
+    return (
+        <>
+        <Button text="Login" />
+        <Button text="Register" />
+        <Button text="Logout" />
+        </>
+    );
+}
 export default App;
