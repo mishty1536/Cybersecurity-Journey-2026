@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Log Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>🛡️ Security Log Dashboard</h1>
+        <p>Security monitoring and threat detection</p>
+    </header>
+
+    <main>
+
+        <section class="stats">
+
+    <div class="card">
+        <h3>Total Logs</h3>
+        <p id="total-logs">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Failed Logins</h3>
+        <p id="failed-logins">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Successful Logins</h3>
+        <p id="successful-logins">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Unique IPs</h3>
+        <p id="unique-ips">0</p>
+    </div>
+
+</section>
+
+<section class="charts">
+
+    <div class="chart-card">
+        <h2>Login Activity</h2>
+        <canvas id="loginChart"></canvas>
+    </div>
+
+    <div class="chart-card">
+        <h2>Security Alerts</h2>
+        <canvas id="alertChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h2>Alerts by Severity</h2>
+        <canvas id="severityChart"></canvas>
+    </div>
+
+</section>
+
+
+        <section class="alerts-section">
+
+            <h2>🚨 Security Alerts</h2>
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search IP or username..."
+                >
+
+                <select id="severity-filter">
+                    <option value="all">All Severities</option>
+                    <option value="HIGH">High</option>
+                    <option value="MEDIUM">Medium</option>
+                    <option value="LOW">Low</option>
+                </select>
+
+                <select id="type-filter">
+                    <option value="all">All Types</option>
+                    <option value="Brute Force">Brute Force</option>
+                    <option value="Suspicious Login">Suspicious Login</option>
+                </select>
+
+                <option value="Suspicious File Access">
+                    Suspicious File Access
+                </option>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Alert ID</th>
+                        <th>Type</th>
+                        <th>Source IP</th>
+                        <th>Username</th>
+                        <th>Severity</th>
+                    </tr>
+                </thead>
+
+                <tbody id="alerts-table">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
+</body>
+</html>
